@@ -943,6 +943,9 @@ status_t SurfaceFlinger::getDisplayConfigs(const sp<IBinder>& display,
                     case 90:
                         displayOrientation = DisplayState::eOrientation90;
                         break;
+                    case 180:
+                        displayOrientation = DisplayState::eOrientation180;
+                        break;
                     case 270:
                         displayOrientation = DisplayState::eOrientation270;
                         break;
