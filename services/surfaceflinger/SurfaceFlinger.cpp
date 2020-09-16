@@ -938,7 +938,7 @@ status_t SurfaceFlinger::getDisplayConfigs(const sp<IBinder>& display,
         int displayOrientation = DisplayState::eOrientationDefault;
         char property[PROPERTY_VALUE_MAX];
         if (type == DisplayDevice::DISPLAY_PRIMARY) {
-            if (property_get("ro.sf.hwrotation", property, NULL) > 0) {
+            if (property_get("ro.boot.hwrotation", property, NULL) > 0) {
                 switch (atoi(property)) {
                     case 90:
                         displayOrientation = DisplayState::eOrientation90;

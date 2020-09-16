@@ -565,7 +565,7 @@ void DisplayDevice::setProjection(int orientation,
     int displayOrientation = DisplayState::eOrientationDefault;
     char property[PROPERTY_VALUE_MAX];
     if (mType == DISPLAY_PRIMARY) {
-        if (property_get("ro.sf.hwrotation", property, NULL) > 0) {
+        if (property_get("ro.boot.hwrotation", property, NULL) > 0) {
             switch (atoi(property)) {
                 case 90:
                     displayOrientation = DisplayState::eOrientation90;
