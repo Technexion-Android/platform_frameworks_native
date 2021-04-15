@@ -3518,7 +3518,7 @@ void TouchInputMapper::configureSurface(nsecs_t when, bool* outResetNeeded) {
 
     char hwrotBuf[PROPERTY_VALUE_MAX];
     int32_t hwrotation = DISPLAY_ORIENTATION_0;
-    if (property_get("ro.sf.hwrotation", hwrotBuf, NULL) > 0) {
+    if (property_get("ro.boot.hwrotation", hwrotBuf, NULL) > 0) {
         switch (atoi(hwrotBuf)) {
             case 90:
                 hwrotation = DISPLAY_ORIENTATION_90;
